@@ -1,0 +1,25 @@
+---
+title: "Exploration_RGPH"
+author: "TAHIANAMAHENINA"
+format: html
+editor: visual
+---
+
+## import de données
+
+exploration du fichier ménage
+
+```{r}
+library(tidyverse)
+library(haven)
+library(labelled)
+```
+
+Chargement de données
+
+```{r}
+menages <- read_spss("data/INSTAT_BD_SPSS_MENAGES_10pc_RGPH-3_2018.sav")
+
+menages2 <- menages %>% 
+  to_factor()
+```
